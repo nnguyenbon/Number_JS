@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(270deg, #000000, #ffffff, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnim 10s ease-out infinite;
+}
+
+.container {
+    min-width: 50% !important;
+    max-width: 500px !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    background: linear-gradient(60deg, #ffffff, #000000, #ffffff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnim 10s ease-out infinite;
+}
+
+h1:hover {
+    cursor: help;
+}
+
+@keyframes gradientAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.btn {
+    margin: 2% auto;
+    padding: 1% 10% !important;
+}
+
+.fw-bold {
+    font-size: 200% !important;
+}
+
+p {
+    background-color: #0000006a;
+    width: 50%;
+    padding: 2%;
+    text-align: center;
+    color: white;
+}
+
+#guessingNum {
+    text-align: center;
+    padding: 1%;
+    margin: 2% auto;
+}
