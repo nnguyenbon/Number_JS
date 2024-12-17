@@ -10,15 +10,15 @@ turnNoti.textContent = turn;
 function checkNum() {
     let input = guessNum.value;
 
-    if (isNaN(input) || input.trim() === "" || input < 0 || input > 100) {
-        setNotification("Please enter a number between 0 and 100.");
+    if (isNaN(input) || input.trim() === "" || input < 1 || input > 100) {
+        setNotification("Please enter a number between 1 and 100.");
         return;
     }
 
     input = Number(input);
 
     if (checkTurn()) {
-        updateTurn(); // Giảm số lượt và cập nhật giao diện
+        updateTurn();
 
         if (input > randomNumber) {
             setNotification("Lower");
@@ -48,10 +48,13 @@ function resetGame() {
     randomNumber = Math.floor(Math.random() * 101);
     turnNoti.textContent = turn;
     guessNum.value = "";
+    document.getElementById("btnSubmit").disabled = false;
+    document.getElementById("btnQMark").disabled = false;
 }
 
 function troll() {
     setNotification("Congratulations, you were trapped :)");
+    document.getElementById("btnSubmit").disabled = true;
 }
 
 function setNotification(message) {
@@ -60,4 +63,5 @@ function setNotification(message) {
 
 function trollToo() {
     setNotification("This is also a trap :)))))");
+    document.getElementById("btnQMark").disabled = true;
 }

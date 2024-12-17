@@ -27,8 +27,8 @@ h1 {
     animation: gradientAnim 10s ease-out infinite;
 }
 
-h1:hover {
-    cursor: help;
+h1:hover, p:hover {
+    cursor: pointer;
 }
 
 @keyframes gradientAnim {
